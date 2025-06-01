@@ -1,0 +1,33 @@
+.skills-main{
+    /* height: 600px; */
+    /* background-color: aqua; */
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.skill{
+    height: 300px;
+    /* border: 2px solid black; */
+    overflow-y: scroll;
+}
+.description-item{
+    /* border: 2px solid blue; */
+    display: flex;
+    justify-content: space-around;
+}
+.ta-div{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: ; */
+}
+.skill-buttons{
+display: flex;
+  justify-content: space-between;
+  width: 90%;
+  height: 100%;
+  gap: 20px;
+  /* border: 2px solid red; */
+}

@@ -1,0 +1,66 @@
+.work-form{
+  /* background-color: aqua; */
+  overflow-y: scroll;
+  height: 280px ;
+  /* display: grid;
+grid-template-columns: 1fr 1fr;
+grid-gap:1rem; */
+max-width: 100%;
+}
+.work-entry {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.accordion-header {
+  background-color: #f8f9fa;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-header h3 {
+  margin: 0;
+}
+
+.accordion-content {
+  padding: 10px;
+  background: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.delete-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.delete-btn:hover {
+  background-color: #cc0000;
+}
+.description-item{
+  /* border: 2px solid red; */
+  margin-top: 10px;
+}
+.description-item textarea{
+  border: 1px solid rgb(215, 215, 215);
+  border-radius: 5px;
+  height: 50px;
+}
+.checkbox-container {
+  width: 170px; /* Adjust width if needed */
+  display: flex;
+  align-items: center;
+  /* gap: 8px;  */
+  justify-content: flex-start; /* Align checkbox and label closely */
+  white-space: nowrap; /* Prevent "Currently Working" from breaking into two lines */
+  /* border: 2px solid green; */
+}

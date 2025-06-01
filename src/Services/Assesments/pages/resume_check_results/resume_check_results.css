@@ -1,0 +1,51 @@
+/* Container styling */
+.container-resume-results {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+/* Message styling */
+.resume-message {
+  color: #4caf50; /* Green color for success */
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.resume-message.failure {
+  color: #f44336; /* Red color for failure */
+}
+
+/* Table styling */
+.resume-results-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.resume-results-table, 
+.resume-results-table th, 
+.resume-results-table td {
+  border: 1px solid #ddd;
+}
+
+.resume-results-table th, 
+.resume-results-table td {
+  padding: 8px;
+  text-align: left;
+}
+
+.resume-results-table th {
+  background-color: #f2f2f2;
+}
+
+.resume-results-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.resume-results-table tr:hover {
+  background-color: #e9e9e9;
+}
+
+.resume-results-table th {
+  color: #333;
+}

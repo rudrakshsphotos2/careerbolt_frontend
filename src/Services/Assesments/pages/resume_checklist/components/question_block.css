@@ -1,0 +1,57 @@
+
+/* Container styling */
+.Question_block {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+/* Block name styling */
+.Question_block .blockName {
+  margin-bottom: 20px;
+}
+
+/* Title and subtitle styling */
+.Question_block h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.Question_block h3 {
+  color: #666;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Question label styling */
+.Question_block label {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #444;
+}
+
+/* Select dropdown styling */
+.Question_block select {
+  margin-left: 10px;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.Question_block select:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+/* Error state styling */
+.Question_block select[style*="border-color: red"] {
+  border-color: red;
+}
+

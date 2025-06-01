@@ -1,0 +1,90 @@
+/* Form container styling */
+.form-container {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+.ResumeCheckForm {
+  font-family: Arial, sans-serif;
+  width: 100%; /* Full width */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+  max-width: fit-content;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+/* Header styling */
+.quiz-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+/* Label styling */
+.ResumeCheckForm label {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #444;
+}
+
+/* Input field styling */
+.ResumeCheckForm input[type="text"],
+.ResumeCheckForm input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-top: 5px;
+}
+
+.ResumeCheckForm input[type="text"]:focus,
+.ResumeCheckForm input[type="email"]:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+/* Paragraph styling */
+.ResumeCheckForm p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Link styling */
+.Whatsapplink {
+  color: #1e90ff;
+  text-decoration: none;
+}
+
+.Whatsapplink:hover {
+  text-decoration: underline;
+}
+
+/* Button styling */
+.ResumeCheckForm button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.ResumeCheckForm button:hover {
+  background-color: #45a049;
+}

@@ -1,0 +1,51 @@
+/* General styles for the container */
+div .results {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+/* Styles for the header */
+.quiz-header {
+  background-color: #007bff;
+  padding: 10px;
+  border-radius: 8px 8px 0 0;
+  color: white;
+  text-align: center;
+}
+
+.quiz-header h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+/* Styles for the main headings */
+h2 {
+  font-size: 1.2em;
+  color: #333;
+  margin: 20px 0 10px;
+}
+
+/* Styles for the ordered lists */
+ol {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+ol li {
+  margin-bottom: 5px;
+  font-size: 1em;
+  color: #555;
+}
+
+/* Specific styles for highlighting top and bottom results */
+.top-results ol {
+  color: #28a745; /* Green color for top results */
+}
+
+.bottom-results ol {
+  color: #dc3545; /* Red color for bottom results */
+}
