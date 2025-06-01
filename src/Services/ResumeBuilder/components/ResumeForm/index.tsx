@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useResumeStore } from '../../store/useResumeStore.ts';
 import PersonalDetails from './steps/PersonalDetails.tsx';
 import Objective from './steps/Objective.tsx';
@@ -98,6 +98,8 @@ const steps: FormStep[] = [
 
 const ResumeForm: React.FC = () => {
   const { data } = useResumeStore();
+  const [error, setError] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const cleanEmptyOptionalFields = (obj: any): any => {
     if (Array.isArray(obj)) {
@@ -134,31 +136,54 @@ const ResumeForm: React.FC = () => {
 
   const handleComplete = async () => {
     try {
-      // Get the latest data from the store
+      setIsSubmitting(true);
+      setError(null);
+      
       const latestData = useResumeStore.getState().data;
       const cleanedData = cleanEmptyOptionalFields(latestData);
-      console.log('Form submitted successfully:', cleanedData);
       
-      // Here you would typically send the cleanedData to your backend
-      // const response = await fetch('/api/resume', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(cleanedData)
-      // });
+      const response = await fetch(process.env.REACT_APP_API_URL!, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(cleanedData)
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to generate resume. Please try again.');
+      }
+
+      // Get the PDF blob from the response
+      const pdfBlob = await response.blob();
+      
+      // Create a URL for the blob
+      const pdfUrl = window.URL.createObjectURL(pdfBlob);
+      
+      // Open the PDF in a new tab
+      window.open(pdfUrl, '_blank');
+      
     } catch (error) {
-      console.error('Submission error:', error);
+      setError(error instanceof Error ? error.message : 'An unexpected error occurred');
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-[1400px] mx-auto px-4 py-8">
+        {error && (
+          <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg text-red-600">
+            {error}
+          </div>
+        )}
+        
         <StepperForm
           steps={steps}
           onComplete={handleComplete}
           initialData={data}
           title="Resume Builder"
           description="Create your professional resume step by step"
+          isSubmitting={isSubmitting}
         />
       </div>
     </div>

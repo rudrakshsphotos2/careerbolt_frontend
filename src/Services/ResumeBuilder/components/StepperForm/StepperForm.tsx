@@ -17,6 +17,7 @@ interface StepperFormProps {
   className?: string;
   title: string;
   description: string;
+  isSubmitting?: boolean;
 }
 
 const StepperForm: React.FC<StepperFormProps> = ({
@@ -26,6 +27,7 @@ const StepperForm: React.FC<StepperFormProps> = ({
   className = '',
   title,
   description,
+  isSubmitting = false,
 }) => {
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
   const [formData, setFormData] = useState(initialData);
@@ -149,6 +151,7 @@ const StepperForm: React.FC<StepperFormProps> = ({
             totalSteps={steps.length}
             onPrevious={handlePrevious}
             onNext={handleNext}
+            isSubmitting={isSubmitting}
           />
         </div>
       </div>
