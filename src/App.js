@@ -1,7 +1,5 @@
 import './App.css';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import AssesmentsRoutes from './Services/Assesments/assesments_routes';
-// import ResumeBuilderRoutes from './Services/ResumeBuilderDeprecated/resume_builder_routes';
 import ResumeBuilderRoutes from './Services/ResumeBuilder/components/resume_builder_routes';
 
 function App() {
@@ -12,7 +10,6 @@ function App() {
         <Route path="/" element={<Home/>} />
         
         {/* Service Routes */}
-        <Route path="/assessments/*" element={<AssesmentsRoutes/>} />
         <Route path="/resume-builder/*" element={<ResumeBuilderRoutes/>} />
       </Routes>
     </Router>
